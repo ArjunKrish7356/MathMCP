@@ -44,6 +44,20 @@ def sqrt(a: float) -> float:
     return math.sqrt(a)
 
 @mcp.tool
+def factorial(n: int) -> int:
+    """Calculate the factorial of a non-negative integer.
+    
+    Args:
+        n: The non-negative integer to calculate the factorial for
+    """
+    import math
+    
+    if n < 0:
+        raise ValueError("Factorial is not defined for negative numbers")
+    
+    return math.factorial(n)
+
+@mcp.tool
 def log(a: float, base: float = 10.0) -> float:
     """Calculate the logarithm of a number with the specified base (default base 10).
     
