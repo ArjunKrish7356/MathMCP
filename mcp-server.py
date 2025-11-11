@@ -30,6 +30,20 @@ def power(a: float, b: float) -> float:
     return a ** b
 
 @mcp.tool
+def sqrt(a: float) -> float:
+    """Calculate the square root of a number.
+    
+    Args:
+        a: The number to calculate the square root for (must be non-negative)
+    """
+    import math
+    
+    if a < 0:
+        raise ValueError("Cannot calculate square root of a negative number")
+    
+    return math.sqrt(a)
+
+@mcp.tool
 def log(a: float, base: float = 10.0) -> float:
     """Calculate the logarithm of a number with the specified base (default base 10).
     
